@@ -1,0 +1,26 @@
+{
+    "deploy": {
+        "packages": [{
+            "files": [
+                "**/*",
+            ],
+
+            "exclude": [
+                "node_modules/**",
+                ".git/**",
+                ".vscode/**",
+                "**/node_modules/**",
+            ],
+            "deployOnSave": false
+        }],
+        "targets": [{
+            "type": "sftp",
+            "name": "MyServer",
+            "dir": "/home/ubuntu/source/docker_ci",
+            "host": "118.89.233.15",
+            "port": 22,
+            "user": "ubuntu",
+            "privateKey": "C:/Users/15623/.ssh/simple.pem"
+        }],
+    },
+}
